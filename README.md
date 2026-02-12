@@ -120,9 +120,20 @@ Learning Rate: 0.001<br>
 
 
 
+# Reflection Questions:
 
-
-
+Answer the following questions based on your experience:
+1. How did the number of images per class affect your model’s accuracy?<br>
+With 250 images per class, the model achieved reasonably good accuracy (~85-95% depending on species), but performance varied significantly across classes.<br>
+2. Which plant species were most commonly misclassified and why?<br>
+   Java Fern ↔ Anubias<br>
+   Both are dark green, leafy aquarium plants attached to hardscape<br>
+3. How did changing the epochs, batch size, or learning rate affect the training results?<br>
+   When I increased the number of epochs from 50 to 100 in Teachable Machine, I noticed that the model's accuracy stopped improving after around 70 epochs and actually started to get worse on the validation set. This happened because the model began memorizing the training images instead of learning general features, which is called overfitting. The training loss kept going down, but the validation loss started going up, showing that the model was losing its ability to recognize new, unseen images. I realized that more epochs is not always better, and Teachable Machine's early stopping feature actually helps prevent this problem by automatically stopping training when the model stops improving.<br>
+4. What challenges did you encounter during dataset collection and labeling?<br>
+   Mixed species in single image, Aquarium photos often show multiple plants<br>
+5. If you were to improve your model, what specific changes would you make and why?<br>
+    Increase to 500+ images per class, +5-10% accuracy for confusing pairs
 
 
 
